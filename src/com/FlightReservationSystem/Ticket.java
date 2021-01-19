@@ -1,6 +1,8 @@
 package com.FlightReservationSystem;
 
-public class Ticket {
+import java.sql.SQLOutput;
+
+public abstract class Ticket {
     public String pnr;
     public String from;
     public String to;
@@ -12,9 +14,13 @@ public class Ticket {
     public float price;
     public boolean cancelled;
 
-    Ticket(String pnr,String from,String to,Flight flite,String departurDateTime,String arrivalDateTime,
-           Passenger pasenger,String seatNo,float price,boolean cancelled){
+    Ticket(String pnr){
         this.pnr=pnr;
+    }
+
+    Ticket(String from,String to,Flight flite,String departurDateTime,String arrivalDateTime,
+           Passenger pasenger,String seatNo,float price,boolean cancelled){
+
         this.from=from;
         this.to=to;
         this.flite=flite;
@@ -38,5 +44,6 @@ public class Ticket {
 
     }
 
+    public abstract void printTicketDetails( String pnr);
 
 }
