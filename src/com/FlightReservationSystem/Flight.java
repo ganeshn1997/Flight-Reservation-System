@@ -28,8 +28,7 @@ public class Flight {
     return "";
     }
 
-    public boolean checkAvailability(){
-     return ;
+    public void checkAvailability(){
     }
 
     public void incrementBookingCounter(){
