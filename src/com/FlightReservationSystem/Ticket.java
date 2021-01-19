@@ -12,6 +12,20 @@ public class Ticket {
     public float price;
     public boolean cancelled;
 
+    Ticket(String pnr,String from,String to,Flight flite,String departurDateTime,String arrivalDateTime,
+           Passenger pasenger,String seatNo,float price,boolean cancelled){
+        this.pnr=pnr;
+        this.from=from;
+        this.to=to;
+        this.flite=flite;
+        this.departurDateTime=departurDateTime;
+        this.arrivalDateTime=arrivalDateTime;
+        this.pasenger=pasenger;
+        this.seatNo=seatNo;
+        this.price=price;
+        this.cancelled=cancelled;
+    }
+
     public String checkStatus(){
         return "";
     }
